@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Pause.gd" type="Script" id=1]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Pause" type="Button" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.7023
+margin_top = 14.6825
+margin_right = -865.298
+margin_bottom = -494.317
+text = "Pause"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="Pause"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="Pause/UI"]
+margin_left = 288.679
+margin_top = 304.62
+margin_right = 552.679
+margin_bottom = 351.62
+text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="Pause/UI"]
+margin_left = 283.339
+margin_top = 143.104
+margin_right = 547.339
+margin_bottom = 190.104
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="Pause/UI"]
+margin_left = 286.009
+margin_top = 219.19
+margin_right = 550.009
+margin_bottom = 266.19
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Pause" to="Pause" method="pause"]
+[connection signal="pressed" from="Pause/UI/Resume" to="Pause" method="resume"]
+[connection signal="pressed" from="Pause/UI/Menu" to="Pause" method="menu"]
+[connection signal="pressed" from="Pause/UI/Restart" to="Pause" method="restart"]

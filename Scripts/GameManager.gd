@@ -11,6 +11,15 @@ var level = 0
 var player = null
 var next_player = null
 
+func pause():
+	get_tree().paused = true
+
+func unpause():
+	get_tree().paused = false
+
+func paused():
+	return get_tree().paused
+
 func _process(delta):
 	player = next_player
 
