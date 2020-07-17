@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Elements/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Elements/Weapons/AOE.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 972.922, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 320.062, 10 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,7 +23,10 @@ position = Vector2( 699.233, 431.239 )
 rotation = -1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+
+[node name="win" parent="StaticBody2D2/CollisionShape2D" instance=ExtResource( 3 )]
+position = Vector2( 40.161, 147.408 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 258.726, 284.852 )
