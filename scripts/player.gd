@@ -12,8 +12,9 @@ var fast = false
 var can_jump = false
 var jump_time = 0.0
 export var max_jump_time = 1.0
-export var air_jumps = 1
+export var air_jumps = 0
 var air_jumps_left = air_jumps
+export var stick_walls = true
 
 var jumping = false
 var left = false
@@ -34,7 +35,10 @@ func _physics_process(delta):
 	if test_move(get_transform(), Vector2 (0, -1)):
 		velocity.y = 0
 	if test_move(get_transform(), Vector2 (0, 1)):
-		velocity = Vector2 (0, 0)
+		on_ground = true
+	elif stick_walls and (
+		test_move(get_transform(), Vector2(1, 0)) or 
+		test_move(get_transform(), Vector2(-1, 0))) and not can_jump:
 		on_ground = true
 	else:
 		if velocity.y > 0:
@@ -44,6 +48,8 @@ func _physics_process(delta):
 		else:
 			velocity += gravity_acceleration
 		on_ground = false
+	if on_ground:
+		velocity = Vector2 (0, 0)
 	if jumping:
 		if just_jumped and (on_ground or air_jumps_left > 0):
 			air_jumps_left -= 1
