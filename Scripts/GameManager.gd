@@ -5,6 +5,7 @@ var level_prefix = "res://Scenes/"
 var level_suffix = ".tscn"
 var levels = [
 	"Test",
+	"Test",
 	"Menu"
 ]
 var level = 0

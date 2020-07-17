@@ -23,17 +23,24 @@ var acceleration = false
 var just_jumped = false
 
 onready var health = $Health
+export var first_player = false
 
 func _enter_tree():
-	GameManager.player = self
+	if first_player:
+		GameManager.player = self
+
+
+func control():
+	if GameManager.player == self:
+		jumping = Input.is_action_pressed ("jump")
+		acceleration = Input.is_action_pressed ("acceleration")
+		right = Input.is_action_pressed ("right")
+		left = Input.is_action_pressed ("left")
 
 func _process(delta):
 	var prev_jumping = jumping
-	jumping = Input.is_action_pressed ("jump")
+	control()
 	just_jumped = jumping and not prev_jumping
-	acceleration = Input.is_action_pressed ("acceleration")
-	right = Input.is_action_pressed ("right")
-	left = Input.is_action_pressed ("left")
 
 func _physics_process(delta):
 	move_and_collide(velocity)
