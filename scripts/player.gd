@@ -13,6 +13,20 @@ var can_jump = false
 var jump_time = 0.0
 export var max_jump_time = 1.0
 
+var jumping = false
+var left = false
+var right = false
+var acceleration = false
+var just_jumped = false
+
+func _process(delta):
+	var prev_jumping = jumping
+	jumping = Input.is_action_pressed ("jump")
+	just_jumped = jumping and not prev_jumping
+	acceleration = Input.is_action_pressed ("acceleration")
+	right = Input.is_action_pressed ("right")
+	left = Input.is_action_pressed ("left")
+
 func _physics_process(delta):
 	move_and_collide(velocity)
 	if test_move(get_transform(), Vector2 (0, -1)):
@@ -28,10 +42,10 @@ func _physics_process(delta):
 		else:
 			velocity += gravity_acceleration
 		on_ground = false
-	if Input.is_action_pressed ("jump"):
+	if jumping:
 		if on_ground:
 			can_jump = true
-			if Input.is_action_just_pressed ("jump"):
+			if just_jumped:
 				jump ()
 		if can_jump:
 			jump_time += delta
@@ -40,13 +54,13 @@ func _physics_process(delta):
 			jump_time = 0
 	else:
 		can_jump = false
-	if Input.is_action_pressed ("acceleration"):# and on_ground:
+	if acceleration:# and on_ground:
 		fast = true
 	else:
 		fast = false
-	if Input.is_action_pressed ("right"):
+	if right:
 		right ()
-	elif Input.is_action_pressed ("left"):
+	elif left:
 		left ()
 	else:
 		velocity.x = 0
