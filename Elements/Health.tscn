@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Health.gd" type="Script" id=1]
+
+[node name="health" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -85.0
+margin_top = -10.0
+margin_right = 82.0
+margin_bottom = 21.0
+max_value = 1.0
+value = 0.35
+__meta__ = {
+"_edit_use_anchors_": false
+}

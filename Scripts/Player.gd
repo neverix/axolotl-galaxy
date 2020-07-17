@@ -22,6 +22,11 @@ var right = false
 var acceleration = false
 var just_jumped = false
 
+onready var health = $Health
+
+func _enter_tree():
+	GameManager.player = self
+
 func _process(delta):
 	var prev_jumping = jumping
 	jumping = Input.is_action_pressed ("jump")

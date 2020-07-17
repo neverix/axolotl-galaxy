@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Elements/Health.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30.0002, 33.9999 )
+
+[node name="player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+jump_force = Vector2( 0, -10 )
+move_force = Vector2( 150, 0 )
+shift_move_force = Vector2( 400, 0 )
+
+[node name="Health" parent="." instance=ExtResource( 1 )]
+margin_left = 5.00018
+margin_top = -69.0
+margin_right = 5.00018
+margin_bottom = -69.0
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 3.00018, -1.99991 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
