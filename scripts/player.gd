@@ -12,6 +12,8 @@ var fast = false
 var can_jump = false
 var jump_time = 0.0
 export var max_jump_time = 1.0
+export var air_jumps = 1
+var air_jumps_left = air_jumps
 
 var jumping = false
 var left = false
@@ -43,10 +45,12 @@ func _physics_process(delta):
 			velocity += gravity_acceleration
 		on_ground = false
 	if jumping:
-		if on_ground:
+		if just_jumped and (on_ground or air_jumps_left > 0):
+			air_jumps_left -= 1
+			if on_ground:
+				air_jumps_left = air_jumps
 			can_jump = true
-			if just_jumped:
-				jump ()
+			jump()
 		if can_jump:
 			jump_time += delta
 		if jump_time > max_jump_time:
@@ -67,7 +71,7 @@ func _physics_process(delta):
 	
 	if not on_ground:
 		pass # $AnimatedSprite.animation = "jump"
-	elif Input.is_action_pressed ("right") or Input.is_action_pressed ("left"):
+	elif right or left:
 		if fast:
 			pass # $AnimatedSprite.animation = "run"
 		else:
