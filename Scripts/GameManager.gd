@@ -1,12 +1,13 @@
 extends Node
 
 var player = null
+var level = "res://Levels/Test.tscn"
 
 func death():
-	menu()
+	game()
 
 func game():
-	load_scene("res://Levels/Test.tscn")
+	load_scene(level)
 
 func menu():
 	load_scene("res://Scenes/Menu.tscn")
