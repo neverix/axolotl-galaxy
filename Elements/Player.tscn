@@ -7,7 +7,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.0002, 33.9999 )
 
-[node name="player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
 script = ExtResource( 2 )
 jump_force = Vector2( 0, -10 )
 move_force = Vector2( 150, 0 )

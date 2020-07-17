@@ -23,11 +23,12 @@ var acceleration = false
 var just_jumped = false
 
 onready var health = $Health
+export var shift_distance = 100
 export var first_player = false
 
 func _enter_tree():
 	if first_player:
-		GameManager.player = self
+		GameManager.player(self)
 
 
 func control():
@@ -36,6 +37,30 @@ func control():
 		acceleration = Input.is_action_pressed ("acceleration")
 		right = Input.is_action_pressed ("right")
 		left = Input.is_action_pressed ("left")
+		if Input.is_action_just_pressed("shift"):
+			var players = get_tree().get_nodes_in_group("Player")
+			var min_distance = INF
+			var target = null
+			for player in players:
+				if player == self:
+					continue
+				var distance = position.distance_to(player.position)
+				if distance < min_distance:
+					min_distance = distance
+					target = player
+			if min_distance < shift_distance:
+				shift(target)
+	else:
+		ai()
+
+func ai():
+	jumping = false
+	acceleration = false
+	right = false
+	left = false
+
+func shift(target):
+	GameManager.player(target)
 
 func _process(delta):
 	var prev_jumping = jumping
