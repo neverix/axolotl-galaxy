@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Pause.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=2]
 
-[node name="UI" type="CanvasLayer"]
+[node name="UI" type="Node"]
 
-[node name="Pause" type="Button" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" type="Button" parent="CanvasLayer"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -18,14 +21,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UI" type="Control" parent="Pause"]
+[node name="UI" type="Control" parent="CanvasLayer/Pause"]
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Resume" type="Button" parent="Pause/UI"]
+[node name="Resume" type="Button" parent="CanvasLayer/Pause/UI"]
 margin_left = 288.679
 margin_top = 304.62
 margin_right = 552.679
@@ -35,7 +38,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Menu" type="Button" parent="Pause/UI"]
+[node name="Menu" type="Button" parent="CanvasLayer/Pause/UI"]
 margin_left = 283.339
 margin_top = 143.104
 margin_right = 547.339
@@ -45,7 +48,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Restart" type="Button" parent="Pause/UI"]
+[node name="Restart" type="Button" parent="CanvasLayer/Pause/UI"]
 margin_left = 286.009
 margin_top = 219.19
 margin_right = 550.009
@@ -54,7 +57,15 @@ text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Pause" to="Pause" method="pause"]
-[connection signal="pressed" from="Pause/UI/Resume" to="Pause" method="resume"]
-[connection signal="pressed" from="Pause/UI/Menu" to="Pause" method="menu"]
-[connection signal="pressed" from="Pause/UI/Restart" to="Pause" method="restart"]
+
+[node name="Camera2D" type="Camera2D" parent="." groups=[
+"Camera",
+]]
+current = true
+smoothing_enabled = true
+offset_v = -1.0
+script = ExtResource( 2 )
+[connection signal="pressed" from="CanvasLayer/Pause" to="CanvasLayer/Pause" method="pause"]
+[connection signal="pressed" from="CanvasLayer/Pause/UI/Resume" to="CanvasLayer/Pause" method="resume"]
+[connection signal="pressed" from="CanvasLayer/Pause/UI/Menu" to="CanvasLayer/Pause" method="menu"]
+[connection signal="pressed" from="CanvasLayer/Pause/UI/Restart" to="CanvasLayer/Pause" method="restart"]

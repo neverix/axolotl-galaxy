@@ -29,10 +29,10 @@ scale = Vector2( 4.20458, 3.53563 )
 texture = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 57.2263
-margin_top = 274.281
-margin_right = 665.226
-margin_bottom = 488.281
+margin_left = 112.141
+margin_top = 341.714
+margin_right = 561.141
+margin_bottom = 438.714
 text = "play"
 script = ExtResource( 1 )
 __meta__ = {
