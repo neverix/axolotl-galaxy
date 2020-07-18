@@ -81,11 +81,12 @@ animations = [ {
 position = Vector2( 710.855, 439.554 )
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
-jump_force = Vector2( 0, -10 )
+jump_force = Vector2( 0, -1 )
 move_force = Vector2( 150, 0 )
 shift_move_force = Vector2( 400, 0 )
 max_jump_time = 2.0
 air_jumps = 1
+shift_distance = 150
 
 [node name="Health" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
