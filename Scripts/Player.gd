@@ -7,21 +7,21 @@ export var gravity_acceleration = Vector2 (0, 1)
 # притяжение при падении после прыжка. должно быть выше, чтобы лучше игралось
 export var strong_gravity_acceleration = Vector2 (0, 1.2)
 # сила прыжка
-export var jump_force = Vector2 (0, -4)
+export var jump_force = Vector2 (0, -1)
 # притяжение во время прыжка. должно быть ниже по тем же соображениям
 # прыжок только добавиляет силу. так как мы не можем предсказать, сколько
 # игрок будет удерживать прыжок, на всю продолжительность прыжка надо снизить гравитацию
 export var jump_gravity_acceleration = Vector2 (0, 0.5)
 # скорость перемещения
-export var move_force = Vector2 (10, 0)
+export var move_force = Vector2 (150, 0)
 # скорость бега
-export var shift_move_force = Vector2 (10, 0)
+export var shift_move_force = Vector2 (400, 0)
 
 var on_ground = false
 var fast = false
 var rising = false
 var jump_time = 0.0
-export var max_jump_time = 1.0
+export var max_jump_time = 2
 export var air_jumps = 0
 var air_jumps_left = air_jumps
 export var stick_walls = true
@@ -33,7 +33,7 @@ var acceleration = false
 var just_jumped = false
 
 onready var health = $Health
-export var shift_distance = 100
+export var shift_distance = 150
 export var first_player = false
 
 
