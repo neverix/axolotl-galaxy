@@ -81,6 +81,7 @@ animations = [ {
 position = Vector2( 710.855, 439.554 )
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
+air_jumps = 1
 
 [node name="Health" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
