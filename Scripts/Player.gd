@@ -1,15 +1,25 @@
 extends KinematicBody2D
 
+# текущая скорость
 var velocity = Vector2 (0, 0)
+# обычное притяжение
 export var gravity_acceleration = Vector2 (0, 1)
+# притяжение при падении после прыжка. должно быть выше, чтобы лучше игралось
 export var strong_gravity_acceleration = Vector2 (0, 1.2)
+# сила прыжка
 export var jump_force = Vector2 (0, -4)
+# притяжение во время прыжка. должно быть ниже по тем же соображениям
+# прыжок только добавиляет силу. так как мы не можем предсказать, сколько
+# игрок будет удерживать прыжок, на всю продолжительность прыжка надо снизить гравитацию
 export var jump_gravity_acceleration = Vector2 (0, 0.5)
+# скорость перемещения
 export var move_force = Vector2 (10, 0)
+# скорость бега
 export var shift_move_force = Vector2 (10, 0)
+
 var on_ground = false
 var fast = false
-var can_jump = false
+var rising = false
 var jump_time = 0.0
 export var max_jump_time = 1.0
 export var air_jumps = 0
@@ -40,6 +50,8 @@ func control():
 		right = Input.is_action_pressed ("right")
 		left = Input.is_action_pressed ("left")
 		if Input.is_action_just_pressed("shift"):
+			# смотрим на все сущности и выбираем самую близкую, не равную
+			# себе и в пределах shift_distance
 			var players = get_tree().get_nodes_in_group("Player")
 			var min_distance = INF
 			var target = null
@@ -70,39 +82,56 @@ func _process(_delta):
 	just_jumped = jumping and not prev_jumping
 
 func _physics_process(delta):
+	# здесь мы берем управление и двигаем персонажа
+	
+	# двигаем его согласно текущей скорости
 	move_and_collide(velocity)
+	# проверяем, не прыгнул ли он до потолка
 	if test_move(get_transform(), Vector2 (0, -1)):
 		velocity.y = 0
+	# проверяем, на земле ли персонаж
 	if test_move(get_transform(), Vector2 (0, 1)):
 		on_ground = true
+	# проверяем, не сидит ли персонаж на стене. он так может делать только
+	# тогда, когда он падает после прыжка - иначе он не сможет спрыгнуть со стены
+	# и прыгать по ней. возможно эту логику надо поменять.
 	elif stick_walls and (
 		test_move(get_transform(), Vector2(1, 0)) or 
-		test_move(get_transform(), Vector2(-1, 0))) and not can_jump:
+		test_move(get_transform(), Vector2(-1, 0))) and not rising:
 		on_ground = true
+	# игрок в воздухе. применяем подходящую силу притяжения
 	else:
+		on_ground = false
 		if velocity.y > 0:
 			velocity += strong_gravity_acceleration
-		elif can_jump:
+		elif rising:
 			velocity += jump_gravity_acceleration
 		else:
 			velocity += gravity_acceleration
-		on_ground = false
+	# если он на земле, обнуляем скорость. горизонтальную составляющую мы зададим ниже
 	if on_ground:
 		velocity = Vector2 (0, 0)
+	# если нажата кнопка прыжок
 	if jumping:
+		# только что прыгнул, добавляем силу прыжка
 		if just_jumped and (on_ground or air_jumps_left > 0):
 			air_jumps_left -= 1
 			if on_ground:
 				air_jumps_left = air_jumps
-			can_jump = true
-			jump()
-		if can_jump:
-			jump_time += delta
-		if jump_time > max_jump_time:
-			can_jump = false
+			rising = true
 			jump_time = 0
+			jump()
+		# все еще поднимается, добавляем время к прыжку
+		if rising:
+			jump_time += delta
+		# падает, так как превышено максимальное время прыжка
+		if jump_time > max_jump_time:
+			rising = false
+			jump_time = 0
+	# если кнопка отпущена, он тоже падает
 	else:
-		can_jump = false
+		rising = false
+	# ну а дальше я думаю понятно
 	if acceleration:# and on_ground:
 		fast = true
 	else:
