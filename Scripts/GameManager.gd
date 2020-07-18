@@ -3,12 +3,13 @@ extends Node
 var level_prefix = "res://Scenes/"
 var level_suffix = ".tscn"
 var levels = [
-	"Test",
-	"Test",
+	"L1S2",
+	"L1S3",
+	"L1S4",
 	"Menu"
 ]
-var level = 0
-var player = null
+var level_index = 0
+var cur_player = null
 var next_player = null
 
 func pause():
@@ -20,8 +21,8 @@ func unpause():
 func paused():
 	return get_tree().paused
 
-func _process(delta):
-	player = next_player
+func _process(_delta):
+	cur_player = next_player
 
 func player(new_player):
 	next_player = new_player
@@ -33,10 +34,10 @@ func death():
 	game()
 
 func game():
-	load_scene(level(level))
+	load_scene(level(level_index))
 
-func win():
-	level += 1
+func win(next_level):
+	level_index = next_level
 	game()
 
 func menu():

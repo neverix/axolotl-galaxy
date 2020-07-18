@@ -5,7 +5,7 @@ export var gravity_acceleration = Vector2 (0, 1)
 export var strong_gravity_acceleration = Vector2 (0, 1.2)
 export var jump_force = Vector2 (0, -4)
 export var jump_gravity_acceleration = Vector2 (0, 0.5)
-export var move_force = Vector2 (4, 0)
+export var move_force = Vector2 (10, 0)
 export var shift_move_force = Vector2 (10, 0)
 var on_ground = false
 var fast = false
@@ -26,13 +26,15 @@ onready var health = $Health
 export var shift_distance = 100
 export var first_player = false
 
+
+
 func _enter_tree():
 	if first_player:
 		GameManager.player(self)
 
 
 func control():
-	if GameManager.player == self:
+	if GameManager.cur_player == self:
 		jumping = Input.is_action_pressed ("jump")
 		acceleration = Input.is_action_pressed ("acceleration")
 		right = Input.is_action_pressed ("right")
@@ -62,7 +64,7 @@ func ai():
 func shift(target):
 	GameManager.player(target)
 
-func _process(delta):
+func _process(_delta):
 	var prev_jumping = jumping
 	control()
 	just_jumped = jumping and not prev_jumping
@@ -106,35 +108,35 @@ func _physics_process(delta):
 	else:
 		fast = false
 	if right:
-		right ()
+		right_motion()
 	elif left:
-		left ()
+		left_motion()
 	else:
 		velocity.x = 0
 	
 	if not on_ground:
-		pass # $AnimatedSprite.animation = "jump"
+		$AnimatedSprite.animation = "jump"
 	elif right or left:
-		if fast:
-			pass # $AnimatedSprite.animation = "run"
-		else:
-			pass # $AnimatedSprite.animation = "run"
+		$AnimatedSprite.animation = "run"
 	else:
-		pass # $AnimatedSprite.animation = "default"
+		$AnimatedSprite.animation = "default"
+	$AnimatedSprite.play()
+	
 
-func jump ():
+
+func jump():
 	velocity.y = jump_force.y
 
-func right ():
+func right_motion():
 	if fast:
 		move_and_slide (shift_move_force)
 	else:
 		move_and_slide (move_force)
-	# $AnimatedSprite.flip_h = false
+	$AnimatedSprite.flip_h = false
 
-func left ():
+func left_motion():
 	if fast:
 		move_and_slide (-shift_move_force)
 	else:
 		move_and_slide (-move_force)
-	# $AnimatedSprite.flip_h = true
+	$AnimatedSprite.flip_h = true

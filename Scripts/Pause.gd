@@ -14,5 +14,5 @@ func menu():
 func resume():
 	GameManager.unpause()
 
-func _process(delta):
+func _process(_delta):
 	$UI.visible = GameManager.paused()

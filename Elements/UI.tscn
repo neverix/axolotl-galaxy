@@ -29,30 +29,34 @@ __meta__ = {
 }
 
 [node name="Resume" type="Button" parent="CanvasLayer/Pause/UI"]
-margin_left = 288.679
-margin_top = 304.62
-margin_right = 552.679
-margin_bottom = 351.62
+margin_left = 335.873
+margin_top = 278.192
+margin_right = 599.873
+margin_bottom = 325.192
 text = "Resume"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Menu" type="Button" parent="CanvasLayer/Pause/UI"]
-margin_left = 283.339
-margin_top = 143.104
-margin_right = 547.339
-margin_bottom = 190.104
+anchor_left = 11.613
+anchor_top = 6.149
+anchor_right = 11.613
+anchor_bottom = 6.149
+margin_left = -130.417
+margin_top = -99.3737
+margin_right = 133.583
+margin_bottom = -52.3737
 text = "Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Restart" type="Button" parent="CanvasLayer/Pause/UI"]
-margin_left = 286.009
-margin_top = 219.19
-margin_right = 550.009
-margin_bottom = 266.19
+margin_left = 335.09
+margin_top = 209.751
+margin_right = 599.09
+margin_bottom = 256.751
 text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -61,6 +65,7 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="." groups=[
 "Camera",
 ]]
+position = Vector2( 481.164, 380.034 )
 current = true
 smoothing_enabled = true
 offset_v = -1.0

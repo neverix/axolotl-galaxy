@@ -11,10 +11,10 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_left = -85.0
-margin_top = -10.0
-margin_right = 82.0
-margin_bottom = 21.0
+margin_left = 24.0
+margin_top = 30.0
+margin_right = 71.0
+margin_bottom = 44.0
 max_value = 1.0
 value = 0.35
 __meta__ = {

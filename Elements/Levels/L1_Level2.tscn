@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Location1/fone2.png" type="Texture" id=1]
+[ext_resource path="res://Elements/Short_Platform_L1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Long_Platform_L1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 480.497, 266.692 )
+scale = Vector2( 0.499496, 0.506101 )
+texture = ExtResource( 1 )
+
+[node name="Wall1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2.70702, 257.609 )
+rotation = -1.5708
+
+[node name="Wall2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 961.497, 889.395 )
+rotation = -1.5708
+
+[node name="Floor" parent="." instance=ExtResource( 4 )]
+position = Vector2( 291.614, 543.341 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 57.0465, 306.235 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 194.977, 269.853 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 314.358, 203.926 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320.594, 344.688 )
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 496.992, 368.742 )
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 567.373, 367.851 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 684.972, 438.232 )
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 739.317, 222.635 )
+
+[node name="StaticBody2D9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 956.388, 209 )
