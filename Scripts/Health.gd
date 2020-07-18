@@ -3,9 +3,10 @@ extends Control
 export var max_health = 5
 var now_health = max_health
 var player = false
-onready var bar = $ProgressBar
+var bar
 
 func _ready():
+	bar = get_tree().get_nodes_in_group("Health")[0]
 	bar.max_value = max_health
 	bar.value = now_health
 	if GameManager.cur_player == get_parent():

@@ -11,10 +11,8 @@
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 13.7023
-margin_top = 14.6825
-margin_right = -865.298
-margin_bottom = -494.317
+margin_right = -840.0
+margin_bottom = -500.0
 text = "Pause"
 script = ExtResource( 1 )
 __meta__ = {
@@ -58,6 +56,17 @@ margin_top = 209.751
 margin_right = 599.09
 margin_bottom = 256.751
 text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" groups=[
+"Health",
+]]
+margin_left = 807.0
+margin_top = 20.0
+margin_right = 916.0
+margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -30,11 +30,13 @@ shape = SubResource( 2 )
 position = Vector2( 40.161, 147.408 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 10.4518, 369.315 )
-air_jumps = 2
+position = Vector2( 89.7372, 346.662 )
 first_player = true
 
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 258.726, 284.852 )
+
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 370.133, 190.113 )
+position = Vector2( 564.001, 275 )
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
