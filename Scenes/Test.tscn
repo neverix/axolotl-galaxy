@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Elements/Weapons/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Elements/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elements/Portal.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 972.922, 10 )
@@ -12,6 +13,14 @@ extents = Vector2( 972.922, 10 )
 extents = Vector2( 320.062, 10 )
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 177.064, 323.371 )
+portal_id = 1
+
+[node name="Portal2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 335.984, 327.609 )
+portal_id = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 465.248, 461.167 )

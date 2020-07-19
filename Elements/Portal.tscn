@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Portal.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 33.7686, 37.6412 )
+
+[node name="Portal" type="Area2D" groups=[
+"Portal",
+]]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="."]
+modulate = Color( 0.0117647, 0.980392, 0.956863, 1 )
+position = Vector2( -0.976494, -1.11433 )
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="body_enter"]
+[connection signal="body_exited" from="." to="." method="body_exit"]
