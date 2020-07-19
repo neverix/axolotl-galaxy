@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/лава2.png-8e1e2e9f1a38919cbcb5847929376743.stex"
+path="res://.import/гора.png-f96945788929b3e72fb66a3ea8da65ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Location1/лава2.png"
-dest_files=[ "res://.import/лава2.png-8e1e2e9f1a38919cbcb5847929376743.stex" ]
+source_file="res://Location1/гора.png"
+dest_files=[ "res://.import/гора.png-f96945788929b3e72fb66a3ea8da65ce.stex" ]
 
 [params]
 

@@ -35,8 +35,8 @@ window/stretch/aspect="expand"
 
 [gui]
 
-theme/custom="res://Fonts/theme.tres"
-theme/custom_font="res://Fonts/amatic.tres"
+theme/custom="res://Elements/Fonts/theme.tres"
+theme/custom_font="res://Elements/Fonts/amatic.tres"
 
 [input]
 

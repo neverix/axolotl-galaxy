@@ -5,13 +5,20 @@
 [ext_resource path="res://Elements/UI.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Main" parent="." instance=ExtResource( 2 )]
-position = Vector2( -18.761, -12.8415 )
-scale = Vector2( 1.05, 1.05 )
+position = Vector2( 1.11664, -2.67768 )
+scale = Vector2( 1, 1.01 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 55.2817, 375.79 )
+position = Vector2( 903.968, 403.684 )
 scale = Vector2( 1, 1 )
+jump_force = Vector2( 0, -5 )
+move_force = Vector2( 100, 0 )
+shift_move_force = Vector2( 200, 0 )
+flip_sprite = true
 
 [node name="UI" parent="." instance=ExtResource( 3 )]

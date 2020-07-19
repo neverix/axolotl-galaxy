@@ -6,7 +6,7 @@
 [node name="Main" type="Node2D"]
 
 [node name="LevelDesign" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2.27097, -156.514 )
+position = Vector2( -287.896, -634.575 )
 scale = Vector2( 2, 2 )
 
 [node name="UI" parent="." instance=ExtResource( 4 )]

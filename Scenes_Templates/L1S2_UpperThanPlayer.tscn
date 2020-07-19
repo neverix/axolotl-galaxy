@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Location1/Вход в пизду твоей бывш... пещеру (2).png" type="Texture" id=1]
 [ext_resource path="res://Location1/лава1.png" type="Texture" id=2]
-[ext_resource path="res://Location1/LP2.png" type="Texture" id=3]
+[ext_resource path="res://Elements/Blocks_Path.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elements/Weapons/Enemy.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -27,84 +28,17 @@ position = Vector2( 320.638, 575.35 )
 scale = Vector2( 0.4, 0.4 )
 texture = SubResource( 2 )
 
-[node name="LP2" type="Sprite" parent="."]
-position = Vector2( 541.397, 522.125 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-
-[node name="LP4" type="Sprite" parent="."]
-position = Vector2( 587.776, 523.315 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP3" type="Sprite" parent="."]
-position = Vector2( 634.155, 523.315 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP5" type="Sprite" parent="."]
-position = Vector2( 685.291, 523.315 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP6" type="Sprite" parent="."]
-position = Vector2( 734.048, 523.315 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP7" type="Sprite" parent="."]
-position = Vector2( 785.184, 524.504 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP8" type="Sprite" parent="."]
-position = Vector2( 836.32, 523.315 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP9" type="Sprite" parent="."]
-position = Vector2( 875.564, 524.504 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP10" type="Sprite" parent="."]
-position = Vector2( 921.943, 525.693 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="LP11" type="Sprite" parent="."]
-position = Vector2( 962.376, 525.693 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_editor_description_": ""
-}
-
 [node name="L2S1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 922.309, 460.737 )
 scale = Vector2( 1, 1.5 )
 next_level = 13
+
+[node name="Blocks_Path" parent="." instance=ExtResource( 3 )]
+position = Vector2( 791.099, 206.356 )
+
+[node name="Blocks_Path2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 602.515, 206.356 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( -19.1453, 480.277 )
+scale = Vector2( 0.7, 0.5 )

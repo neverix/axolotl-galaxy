@@ -12,22 +12,22 @@ var levels = [
 	"L0S3_pos1", #4
 	"L0S3_pos2", #5
 	
-	"L1S1_1pos", #6
-	"L1S1_2pos", #7
+	"L1S1_pos1", #6
+	"L1S1_pos2", #7
 	 
-	"L1S2_1pos", #8
-	"L1S2_2pos", #9
-	"L1S2_3pos", #10
+	"L1S2_pos1", #8
+	"L1S2_pos2", #9
+	"L1S2_pos3", #10
 	
-	"L1S3_1pos", #11
-	"L1S3_2pos", #12
+	"L1S3_pos1", #11
+	"L1S3_pos2", #12
 	
-	"L2S1_1pos", #13
-	"L2s1_2pos", #14
+	"L2S1_pos1", #13
+	"L2s1_pos2", #14
 	
 	"Menu" #15
 ]
-var level_index = 0
+var level_index = 6
 var cur_player = null
 var next_player = null
 

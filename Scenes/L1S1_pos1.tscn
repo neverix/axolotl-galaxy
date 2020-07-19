@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Location1/ауе.png" type="Texture" id=1]
+[ext_resource path="res://Scenes_Templates/L1S1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Weapons/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elements/Player.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Main" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.0991182, -163.6 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64.6255, 345.589 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( -3.36365, 3.36359 )
+current = true
+limit_left = 10
+limit_top = -150
+limit_right = 1400
+limit_bottom = 680
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 295.074, 592.979 )
+scale = Vector2( 0.470334, 0.359606 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 893.087, 593.217 )
+scale = Vector2( 0.470334, 0.359606 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 1493.09, 593.217 )
+scale = Vector2( 0.470334, 0.359606 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( -726.487, 463.177 )
+scale = Vector2( 3, 0.5 )

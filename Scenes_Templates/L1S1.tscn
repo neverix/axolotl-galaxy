@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Elements/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/L1_Level_Design1.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Node2D"]
+
+[node name="LevelDesign" parent="." instance=ExtResource( 2 )]
+position = Vector2( -5.04883, -76.929 )
+
+[node name="UI" parent="." instance=ExtResource( 1 )]
