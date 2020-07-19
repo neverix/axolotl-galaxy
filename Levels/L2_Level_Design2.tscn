@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Location2/cave2.png" type="Texture" id=2]
+[ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Location1/ауе.png" type="Texture" id=4]
+[ext_resource path="res://Elements/Weapons/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elements/Platform_L2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Elements/Portal.tscn" type="PackedScene" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 243.807, 798.433 )
+scale = Vector2( 2.38278, 0.506023 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 496.421, 400.048 )
+scale = Vector2( 0.502778, 0.506023 )
+texture = ExtResource( 2 )
+
+[node name="L2S1" parent="." instance=ExtResource( 1 )]
+position = Vector2( -24, 399.776 )
+scale = Vector2( 1, 9.96 )
+next_level = 14
+
+[node name="ComingSoon" parent="." instance=ExtResource( 1 )]
+position = Vector2( 996, 399.776 )
+scale = Vector2( 1, 10.28 )
+next_level = 16
+
+[node name="Node2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 115.774, 323.034 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 876.674, 270.209 )
+
+[node name="Portal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 330.441, 413.951 )
+portal_id = 1
+
+[node name="Portal2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 332.853, 132.78 )
+portal_id = 1
+
+[node name="Portal3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 544.998, 137.954 )
+portal_id = 2
+
+[node name="Portal4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 744.271, 139.882 )
+portal_id = 2
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 283.515, -137.162 )
+rotation = -1.58295
+
+[node name="Node2D3" type="Node2D" parent="."]
+position = Vector2( 0, -52 )
+
+[node name="Enemy" parent="Node2D3" instance=ExtResource( 5 )]
+position = Vector2( -2088.75, 470.198 )
+scale = Vector2( 5.64, 1 )
+
+[node name="ауе" type="Sprite" parent="Node2D3"]
+position = Vector2( 514.23, 808.815 )
+texture = ExtResource( 4 )
