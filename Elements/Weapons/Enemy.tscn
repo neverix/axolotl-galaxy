@@ -8,6 +8,7 @@ height = 266.383
 
 [node name="Enemy" type="Area2D"]
 script = ExtResource( 2 )
+damage = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 494.71, 266.383 )
