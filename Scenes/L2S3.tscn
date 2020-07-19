@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/Win.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=4]
@@ -18,11 +17,10 @@ position = Vector2( 496.421, 143.024 )
 scale = Vector2( 0.502778, 0.506023 )
 texture = ExtResource( 5 )
 
-[node name="ComingSoon" type="Area2D" parent="Node2D4" instance=ExtResource( 4 )]
+[node name="L1S3" parent="Node2D4" instance=ExtResource( 4 )]
 position = Vector2( 549.988, 399.776 )
 scale = Vector2( 1, 10.28 )
-script = ExtResource( 1 )
-next_level = 17
+next_level = 12
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
 

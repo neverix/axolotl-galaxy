@@ -50,7 +50,9 @@ position = Vector2( 668.263, 465.459 )
 [node name="L1S2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -24.8566, 191.062 )
 scale = Vector2( 1, 5 )
+next_level = 10
 
 [node name="L2S2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 980.077, 141.172 )
 scale = Vector2( 1, 5 )
+next_level = 15
