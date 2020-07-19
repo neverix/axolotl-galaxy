@@ -6,7 +6,7 @@
 
 [node name="Slideshow" type="Node2D"]
 script = ExtResource( 1 )
-delay = 5
+delay = 3
 
 [node name="Image2" type="TextureRect" parent="."]
 margin_right = 960.0
