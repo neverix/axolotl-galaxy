@@ -23,11 +23,12 @@ var levels = [
 	"L1S3_pos2", #12
 	
 	"L2S1_pos1", #13
-	"L2s1_pos2", #14
+	"L2S1_pos2", #14
 	
 	"L2S2", # 15
+	"L2S3", # 16
 	
-	"ComingSoon" #16
+	"ComingSoon" #17
 ]
 var level_index = 0
 var skip_cutscene = false
