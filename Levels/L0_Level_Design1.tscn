@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Location0/Background.png" type="Texture" id=1]
+[ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="TextureRect" parent="."]
+margin_right = 969.0
+margin_bottom = 542.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FLoor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 304.294, 431.5 )
+
+[node name="L0S1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 985.585, 202.177 )
+scale = Vector2( 1, 7.4 )
+next_level = 8
