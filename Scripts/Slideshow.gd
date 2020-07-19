@@ -2,11 +2,12 @@ extends Node2D
 
 onready var img = $Image
 export var textures = [
-	preload("res://Location1/fone2.png"),
-	preload("res://icon.png")
+	preload("res://Art/фон небо.png"),
+	preload("res://Art/кит.png"),
+	preload("res://Location0/Background.png")
 ]
 export var speed = 1
-export var delay = 5
+export var delay = 20
 var index = 0
 
 func _ready():

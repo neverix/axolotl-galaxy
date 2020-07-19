@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Levels/L0_Level_Design3.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Elements/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/UI.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UI" parent="." instance=ExtResource( 3 )]
+
+[node name="Node2D" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 2, 2 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1818.14, 1022.32 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 10
+limit_top = 0
+limit_right = 1900
+limit_bottom = 1080

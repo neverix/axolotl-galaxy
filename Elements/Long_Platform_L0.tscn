@@ -8,19 +8,17 @@ atlas = ExtResource( 1 )
 region = Rect2( 224, 229, 902.804, 408 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 277.75, 123.731 )
+extents = Vector2( 95.1287, 51.1772 )
 
 [node name="StaticBody2D" type="StaticBody2D"]
-position = Vector2( 492.146, 257.387 )
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.4, 0.4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 2.53979, -8.91907 )
+position = Vector2( 11.0251, -1.1409 )
 rotation = -0.0665555
-scale = Vector2( 2.70294, 2.70294 )
 texture = SubResource( 1 )
 region_enabled = true
 region_rect = Rect2( 175, 30, 210, 100 )

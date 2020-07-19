@@ -53,14 +53,19 @@ func death():
 	game()
 
 func game():
+	Music.switch(Music.levels[level_index])
 	load_scene(level(level_index))
 
 func win(next_level):
 	level_index = next_level
 	game()
 
+func start():
+	load_scene("res://Scenes/Slideshow.tscn")
+
 func menu():
 	load_scene("res://Scenes/Menu.tscn")
+	Music.switch(2)
 
 var scene_to_load = ""
 var fade_speed = 5

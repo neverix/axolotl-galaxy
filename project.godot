@@ -25,6 +25,7 @@ config/quit_on_go_back=false
 
 GameManager="*res://Scripts/GameManager.gd"
 Fader="*res://Elements/Fader.tscn"
+Music="*res://Elements/Music.tscn"
 
 [display]
 
