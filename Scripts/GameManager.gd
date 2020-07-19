@@ -27,7 +27,7 @@ var levels = [
 	
 	"Menu" #15
 ]
-var level_index = 6
+var level_index = 0
 var cur_player = null
 var next_player = null
 

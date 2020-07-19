@@ -21,12 +21,12 @@ __meta__ = {
 [node name="FLoor" parent="." instance=ExtResource( 2 )]
 position = Vector2( 304.294, 542 )
 
-[node name="L0S2" parent="." instance=ExtResource( 3 )]
+[node name="L1S1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 985.585, 229.695 )
 scale = Vector2( 1, 7.4 )
-next_level = 8
+next_level = 6
 
-[node name="L0S1" parent="." instance=ExtResource( 3 )]
+[node name="L0S2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -26.6967, 202.177 )
 scale = Vector2( 1, 7.4 )
 next_level = 3
