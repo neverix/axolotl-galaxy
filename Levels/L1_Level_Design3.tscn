@@ -14,12 +14,12 @@ texture = ExtResource( 1 )
 [node name="FLoor" parent="." instance=ExtResource( 2 )]
 position = Vector2( 310.644, 418.186 )
 
-[node name="L0S3" parent="." instance=ExtResource( 3 )]
-position = Vector2( -40.5405, 202.626 )
-scale = Vector2( 1, 5 )
-next_level = 100
-
 [node name="L1S2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 994.07, 205.005 )
+position = Vector2( -32.0552, 196.969 )
 scale = Vector2( 1, 5 )
-next_level = 1
+next_level = 9
+
+[node name="L2S2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 985.585, 202.177 )
+scale = Vector2( 1, 5 )
+next_level = 7

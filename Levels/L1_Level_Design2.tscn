@@ -1,24 +1,55 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Location1/fone2.png" type="Texture" id=1]
 [ext_resource path="res://Elements/Short_Platform_L1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Long_Platform_L1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Location1/лава1.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 479.438, 273.235 )
-scale = Vector2( 0.499496, 0.506101 )
+position = Vector2( 478.803, 269.466 )
+scale = Vector2( 0.503254, 0.501323 )
 texture = ExtResource( 1 )
 
+[node name="Lava1" type="Sprite" parent="."]
+position = Vector2( 783.491, 306.642 )
+scale = Vector2( 0.121323, 0.139446 )
+texture = ExtResource( 6 )
+
+[node name="Lava3" type="Sprite" parent="."]
+position = Vector2( 164.404, 322.516 )
+scale = Vector2( 0.198212, 0.139446 )
+texture = ExtResource( 6 )
+
+[node name="Lava4" type="Sprite" parent="."]
+position = Vector2( 490.615, 362.201 )
+scale = Vector2( 0.214334, 0.232044 )
+texture = ExtResource( 6 )
+
+[node name="Lava5" type="Sprite" parent="."]
+position = Vector2( 752.995, 435.6 )
+scale = Vector2( 0.185264, 0.234987 )
+texture = ExtResource( 6 )
+
+[node name="Lava2" type="Sprite" parent="."]
+position = Vector2( 359.2, 304.397 )
+scale = Vector2( 0.072215, 0.0770867 )
+texture = ExtResource( 6 )
+
+[node name="Lava6" type="Sprite" parent="."]
+position = Vector2( 154.426, 401.228 )
+scale = Vector2( 0.072215, 0.0770867 )
+texture = ExtResource( 6 )
+
 [node name="Wall1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 9.05663, 968.765 )
+position = Vector2( 0.0667772, 1201 )
 rotation = -1.5708
 
 [node name="Wall2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 961.497, 889.395 )
+position = Vector2( 959.999, 986.785 )
 rotation = -1.5708
 
 [node name="Floor" parent="." instance=ExtResource( 4 )]
@@ -27,31 +58,108 @@ position = Vector2( 291.614, 543.341 )
 [node name="StaticBody2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 57.0465, 306.235 )
 
-[node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 194.977, 269.853 )
-
 [node name="StaticBody2D3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 314.358, 203.926 )
 
-[node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 320.594, 344.688 )
-
 [node name="StaticBody2D5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 496.992, 368.742 )
+position = Vector2( 538.945, 140.999 )
 
 [node name="StaticBody2D6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 567.373, 367.851 )
+position = Vector2( 614.099, 475.129 )
 
 [node name="StaticBody2D7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 684.972, 438.232 )
+position = Vector2( 144.083, 454.713 )
+
+[node name="StaticBody2D10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 33.9089, 513.466 )
+
+[node name="StaticBody2D35" parent="." instance=ExtResource( 2 )]
+position = Vector2( -4.27485, 513.466 )
+
+[node name="StaticBody2D11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72.0338, 513.067 )
+
+[node name="StaticBody2D12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 110.292, 513.067 )
+
+[node name="StaticBody2D13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 148.133, 513.067 )
+
+[node name="StaticBody2D14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 185.973, 513.068 )
+
+[node name="StaticBody2D15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 223.813, 513.068 )
+
+[node name="StaticBody2D16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 262.495, 513.068 )
+
+[node name="StaticBody2D17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 300.335, 513.068 )
+
+[node name="StaticBody2D18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 338.175, 513.068 )
+
+[node name="StaticBody2D19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 376.016, 513.068 )
+
+[node name="StaticBody2D20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 413.856, 513.068 )
+
+[node name="StaticBody2D21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 451.696, 513.068 )
+
+[node name="StaticBody2D22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 489.537, 513.068 )
+
+[node name="StaticBody2D23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 527.377, 513.068 )
+
+[node name="StaticBody2D24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 565.217, 513.068 )
+
+[node name="StaticBody2D25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 603.899, 513.068 )
+
+[node name="StaticBody2D26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 641.739, 513.068 )
+
+[node name="StaticBody2D27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 679.579, 513.068 )
+
+[node name="StaticBody2D28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 717.42, 513.068 )
+
+[node name="StaticBody2D29" parent="." instance=ExtResource( 2 )]
+position = Vector2( 755.26, 513.068 )
+
+[node name="StaticBody2D30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 793.1, 513.068 )
+
+[node name="StaticBody2D31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 830.941, 513.068 )
+
+[node name="StaticBody2D32" parent="." instance=ExtResource( 2 )]
+position = Vector2( 868.781, 513.068 )
+
+[node name="StaticBody2D33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 906.621, 513.068 )
+
+[node name="StaticBody2D34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 944.462, 513.068 )
 
 [node name="StaticBody2D8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 739.317, 222.635 )
+position = Vector2( 658.408, 293.055 )
 
 [node name="StaticBody2D9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 956.388, 209 )
+position = Vector2( 931.242, 317.989 )
 
 [node name="L1S1" parent="." instance=ExtResource( 5 )]
-position = Vector2( -13.9082, 315.335 )
+position = Vector2( -35.7754, 287.442 )
 scale = Vector2( 1, 5 )
-next_level = 2
+next_level = 15
+
+[node name="L1S3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 994.993, 175.558 )
+scale = Vector2( 1, 5 )
+next_level = 11

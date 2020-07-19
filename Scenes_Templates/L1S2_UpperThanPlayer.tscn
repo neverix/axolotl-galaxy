@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Location1/Вход в пизду твоей бывш... пещеру (2).png" type="Texture" id=1]
+[ext_resource path="res://Location1/лава1.png" type="Texture" id=2]
+[ext_resource path="res://Location1/LP2.png" type="Texture" id=3]
+[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 621.415, 33.8935, 415.428, 812.074 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 117.267, 331.478, 1018.6, 255.648 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cave" type="Sprite" parent="."]
+position = Vector2( 918.37, 459.185 )
+scale = Vector2( 0.25, 0.25 )
+texture = SubResource( 1 )
+
+[node name="Lava" type="Sprite" parent="."]
+position = Vector2( 320.638, 575.35 )
+scale = Vector2( 0.4, 0.4 )
+texture = SubResource( 2 )
+
+[node name="LP2" type="Sprite" parent="."]
+position = Vector2( 541.397, 522.125 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="LP4" type="Sprite" parent="."]
+position = Vector2( 587.776, 523.315 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP3" type="Sprite" parent="."]
+position = Vector2( 634.155, 523.315 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP5" type="Sprite" parent="."]
+position = Vector2( 685.291, 523.315 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP6" type="Sprite" parent="."]
+position = Vector2( 734.048, 523.315 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP7" type="Sprite" parent="."]
+position = Vector2( 785.184, 524.504 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP8" type="Sprite" parent="."]
+position = Vector2( 836.32, 523.315 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP9" type="Sprite" parent="."]
+position = Vector2( 875.564, 524.504 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP10" type="Sprite" parent="."]
+position = Vector2( 921.943, 525.693 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LP11" type="Sprite" parent="."]
+position = Vector2( 962.376, 525.693 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="L2S1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 922.309, 460.737 )
+scale = Vector2( 1, 1.5 )
+next_level = 13

@@ -3,12 +3,31 @@ extends Node
 var level_prefix = "res://Scenes/"
 var level_suffix = ".tscn"
 var levels = [
-	"L1S1_1pos",
-	"L1S2_1pos",
-	"L1S1_2pos",
-	"Menu"
+	"L0S1_pos1", #0
+	"L0S1_pos2", #1
+	
+	"L0S2_pos1", #2
+	"L0S2_pos2", #3
+	
+	"L0S3_pos1", #4
+	"L0S3_pos2", #5
+	
+	"L1S1_1pos", #6
+	"L1S1_2pos", #7
+	 
+	"L1S2_1pos", #8
+	"L1S2_2pos", #9
+	"L1S2_3pos", #10
+	
+	"L1S3_1pos", #11
+	"L1S3_2pos", #12
+	
+	"L2S1_1pos", #13
+	"L2s1_2pos", #14
+	
+	"Menu" #15
 ]
-var level_index = 0
+var level_index = 8
 var cur_player = null
 var next_player = null
 
