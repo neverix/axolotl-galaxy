@@ -18,57 +18,41 @@ __meta__ = {
 }
 
 [node name="FLoor" parent="." instance=ExtResource( 2 )]
-position = Vector2( 304.294, 410.147 )
+position = Vector2( 304.294, 542 )
 
 [node name="L0S2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 985.585, 202.177 )
+position = Vector2( 985.585, 229.695 )
 scale = Vector2( 1, 7.4 )
-next_level = 4
+next_level = 8
 
 [node name="L0S1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -26.6967, 202.177 )
 scale = Vector2( 1, 7.4 )
-next_level = 1
+next_level = 3
 
-[node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 279.316, 340.595 )
+[node name="StaticBody2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 163.444, 468.311 )
 
 [node name="StaticBody2D2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 420.969, 300.504 )
+position = Vector2( 276.837, 430.513 )
 
 [node name="StaticBody2D3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 684.675, 327.231 )
+position = Vector2( 390.229, 364.997 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 94.1245
-margin_top = 243.664
-margin_right = 345.124
-margin_bottom = 398.664
-grow_horizontal = 2
-grow_vertical = 2
-rect_scale = Vector2( 0.5, 0.5 )
-size_flags_horizontal = 8
-size_flags_vertical = 8
-size_flags_stretch_ratio = 0.0
-text = "Space or arrow
-up to jump"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="StaticBody2D4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 499.843, 273.023 )
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 497.786
-margin_top = 175.45
-margin_right = 758.786
-margin_bottom = 330.45
-grow_horizontal = 2
-grow_vertical = 2
-rect_scale = Vector2( 0.7, 0.7 )
-size_flags_horizontal = 8
-size_flags_vertical = 8
-size_flags_stretch_ratio = 0.0
-text = "You can double
-jump too!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="StaticBody2D5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 663.632, 246.565 )
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 512.442, 416.654 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 794.157, 493.229 )
+rotation = -1.5708
+scale = Vector2( 0.786, 0.5 )
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 869.806, 315.544 )
+scale = Vector2( 0.861, 0.5 )

@@ -7,7 +7,6 @@
 
 [node name="Player" parent="." index="2" instance=ExtResource( 2 )]
 position = Vector2( 1809.19, 760.311 )
-stick_walls = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
 current = true
