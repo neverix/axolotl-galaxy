@@ -25,7 +25,7 @@ var levels = [
 	"L2S1_pos1", #13
 	"L2s1_pos2", #14
 	
-	"Menu" #15
+	"ComingSoon" #15
 ]
 var level_index = 0
 var cur_player = null
