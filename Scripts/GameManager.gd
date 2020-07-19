@@ -62,7 +62,7 @@ func win(next_level):
 
 func menu():
 	load_scene("res://Scenes/Menu.tscn")
-	Music.switch(0)
+	Music.switch(2)
 
 var scene_to_load = ""
 var fade_speed = 5

@@ -2,7 +2,8 @@ extends AudioStreamPlayer
 
 var tracks = [
 	preload("res://Music/la4.ogg"),
-	preload("res://Music/ajr.ogg")
+	preload("res://Music/ajr.ogg"),
+	preload("res://Music/astronomia.ogg")
 ]
 var levels = [
 	# L0
@@ -27,8 +28,8 @@ var levels = [
 	0, #12
 	
 	# L2
-	0, #13
-	0, #14
+	2, #13
+	2, #14
 	
 	# Menu
 	0 #15
@@ -37,7 +38,7 @@ var current_track = -1
 
 func _ready():
 	if current_track == -1:
-		switch(0)
+		switch(2)
 
 func switch(track_index):
 	if track_index == current_track:

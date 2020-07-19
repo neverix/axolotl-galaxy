@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/astronomia.ogg-b9f5e6be7d648cbff4e58d23afb2d89d.oggstr"
+
+[deps]
+
+source_file="res://Music/astronomia.ogg"
+dest_files=[ "res://.import/astronomia.ogg-b9f5e6be7d648cbff4e58d23afb2d89d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
