@@ -11,10 +11,10 @@
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -840.0
-margin_bottom = -500.0
+margin_right = -902.0
+margin_bottom = -464.0
 theme = ExtResource( 2 )
-text = "Pause"
+text = "| |"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
