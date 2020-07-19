@@ -133,6 +133,8 @@ func _physics_process(delta):
 			air_jumps_left -= 1
 			rising = true
 			jump_time = 0
+			if on_ground:
+				air_jumps_left = air_jumps
 			jump()
 		# все еще поднимается, добавляем время к прыжку
 		if rising:
