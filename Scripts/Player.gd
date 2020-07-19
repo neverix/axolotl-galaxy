@@ -34,7 +34,7 @@ var just_jumped = false
 
 onready var health = $Health
 export var shift_distance = 150
-export var first_player = false
+export var first_player = true
 
 
 

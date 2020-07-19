@@ -40,7 +40,6 @@ position = Vector2( 40.161, 147.408 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 89.7372, 346.662 )
-first_player = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 258.726, 284.852 )

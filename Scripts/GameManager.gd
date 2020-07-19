@@ -3,9 +3,8 @@ extends Node
 var level_prefix = "res://Scenes/"
 var level_suffix = ".tscn"
 var levels = [
+	"L1S1",
 	"L1S2",
-	"L1S3",
-	"L1S4",
 	"Menu"
 ]
 var level_index = 0

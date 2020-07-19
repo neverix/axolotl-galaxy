@@ -1,14 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Elements/Levels/L1_Level2.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Levels/L1_Level_Design2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Elements/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/UI.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node2D"]
 
 [node name="Scene" parent="." instance=ExtResource( 1 )]
-position = Vector2( -42.6881, -141.777 )
+position = Vector2( -38.1984, -155.246 )
 scale = Vector2( 2, 2 )
 
 [node name="player" parent="." instance=ExtResource( 3 )]
@@ -17,11 +16,5 @@ scale = Vector2( 2.2, 2.2 )
 jump_force = Vector2( 0, -15 )
 move_force = Vector2( 400, 0 )
 stick_walls = false
-first_player = true
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
-
-[node name="L1S3" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 1901.61, 27.9492 )
-scale = Vector2( 1, 5 )

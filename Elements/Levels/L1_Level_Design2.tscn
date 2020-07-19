@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Location1/fone2.png" type="Texture" id=1]
 [ext_resource path="res://Elements/Short_Platform_L1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Long_Platform_L1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 480.497, 266.692 )
+position = Vector2( 479.438, 273.235 )
 scale = Vector2( 0.499496, 0.506101 )
 texture = ExtResource( 1 )
 
@@ -49,3 +50,8 @@ position = Vector2( 739.317, 222.635 )
 
 [node name="StaticBody2D9" parent="." instance=ExtResource( 3 )]
 position = Vector2( 956.388, 209 )
+
+[node name="L1S3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 998.854, -21.6985 )
+scale = Vector2( 1, 5 )
+next_level = 2

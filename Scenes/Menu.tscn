@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
@@ -10,29 +9,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="icon" type="Sprite" parent="."]
-position = Vector2( 344.958, 142.901 )
-rotation = 0.184513
-scale = Vector2( 4.44606, 0.504164 )
-texture = ExtResource( 2 )
-
-[node name="icon2" type="Sprite" parent="."]
-position = Vector2( 829.548, 335.133 )
-rotation = -1.92179
-scale = Vector2( 1.24792, 3.97501 )
-texture = ExtResource( 2 )
-
-[node name="icon3" type="Sprite" parent="."]
-position = Vector2( 766.874, 76.5053 )
-rotation = -0.892808
-scale = Vector2( 4.20458, 3.53563 )
-texture = ExtResource( 2 )
-
 [node name="Button" type="Button" parent="."]
-margin_left = 112.141
-margin_top = 341.714
-margin_right = 561.141
-margin_bottom = 438.714
+anchor_right = 0.489
+anchor_bottom = 0.5
+margin_left = 245.003
+margin_top = 218.943
+margin_right = 224.562
+margin_bottom = 45.9432
 text = "play"
 script = ExtResource( 1 )
 __meta__ = {
