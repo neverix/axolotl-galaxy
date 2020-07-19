@@ -76,8 +76,19 @@ func ai():
 	right = false
 	left = false
 
+export var shift_speed = 10
+var shift_target = null
+
 func shift(target):
-	GameManager.player(target)
+	shift_target = target
+	Fader.fade_in(shift_speed, funcref(self, "do_shift"))
+
+func do_shift():
+	GameManager.player(shift_target)
+	Fader.fade_out(shift_speed, funcref(self, "nop"))
+
+func nop():
+	pass
 
 func _process(_delta):
 	var prev_jumping = jumping
