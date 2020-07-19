@@ -4,4 +4,4 @@ const next = "res://levels/test.tscn"
 
 
 func _pressed():
-	GameManager.game()
+	GameManager.start()

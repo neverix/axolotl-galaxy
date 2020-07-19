@@ -60,6 +60,9 @@ func win(next_level):
 	level_index = next_level
 	game()
 
+func start():
+	load_scene("res://Scenes/Slideshow.tscn")
+
 func menu():
 	load_scene("res://Scenes/Menu.tscn")
 	Music.switch(2)
