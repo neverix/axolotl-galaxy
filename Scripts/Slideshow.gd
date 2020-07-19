@@ -7,7 +7,7 @@ export var textures = [
 	preload("res://Location0/Background.png")
 ]
 export var speed = 1
-export var delay = 5
+export var delay = 20
 var index = 0
 
 func _ready():
