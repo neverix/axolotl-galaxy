@@ -24,6 +24,7 @@ config/quit_on_go_back=false
 [autoload]
 
 GameManager="*res://Scripts/GameManager.gd"
+Fader="*res://Elements/Fader.tscn"
 
 [display]
 

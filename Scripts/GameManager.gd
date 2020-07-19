@@ -21,7 +21,7 @@ func unpause():
 func paused():
 	return get_tree().paused
 
-func _process(_delta):
+func _process(delta):
 	cur_player = next_player
 
 func player(new_player):
@@ -43,5 +43,18 @@ func win(next_level):
 func menu():
 	load_scene("res://Scenes/Menu.tscn")
 
+var scene_to_load = ""
+var fade_speed = 5
+var fading_in = true
+onready var fader = Fader
+
 func load_scene(scene):
-	get_tree().change_scene(scene)
+	scene_to_load = scene
+	Fader.fade_in(fade_speed, funcref(self, "scene_loaded"))
+
+func scene_loaded():
+	get_tree().change_scene(scene_to_load)
+	Fader.fade_out(fade_speed, funcref(self, "nop"))
+
+func nop():
+	pass
