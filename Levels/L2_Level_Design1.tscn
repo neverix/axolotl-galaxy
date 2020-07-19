@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Location2/cave1.png" type="Texture" id=1]
+[ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Platform_L2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elements/Portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 478.54, 282.684 )
+scale = Vector2( 0.485101, 0.356376 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( -504.16, 381.715 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 301.212, 552.767 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1092.33, 356.77 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 778.734, 668.584 )
+rotation = 1.5708
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 160.45, 713.129 )
+rotation = 1.5708
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 659.354, 107.318 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 707.462, 435.169 )
+rotation = -1.5708
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 705.68, 360.333 )
+rotation = -1.5708
+
+[node name="Portal2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 789.425, 98.4089 )
+
+[node name="Portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 668.263, 465.459 )
+
+[node name="L1S2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -24.8566, 191.062 )
+scale = Vector2( 1, 5 )
+
+[node name="L2S2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 980.077, 141.172 )
+scale = Vector2( 1, 5 )
