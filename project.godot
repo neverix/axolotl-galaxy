@@ -33,6 +33,11 @@ window/size/height=540
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom="res://Fonts/theme.tres"
+theme/custom_font="res://Fonts/amatic.tres"
+
 [input]
 
 acceleration={

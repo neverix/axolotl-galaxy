@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Pause.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/theme.tres" type="Theme" id=2]
 
 [node name="UI" type="Node"]
 
@@ -10,9 +11,10 @@
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -840.0
-margin_bottom = -500.0
-text = "Pause"
+margin_right = -902.0
+margin_bottom = -464.0
+theme = ExtResource( 2 )
+text = "| |"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -25,11 +27,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause/UI"]
+visible = false
+margin_left = 334.0
+margin_top = 147.0
+margin_right = 600.0
+margin_bottom = 444.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Resume" type="Button" parent="CanvasLayer/Pause/UI"]
 margin_left = 335.873
-margin_top = 278.192
+margin_top = 362.377
 margin_right = 599.873
-margin_bottom = 325.192
+margin_bottom = 444.377
 text = "Resume"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -51,9 +63,9 @@ __meta__ = {
 
 [node name="Restart" type="Button" parent="CanvasLayer/Pause/UI"]
 margin_left = 335.09
-margin_top = 209.751
+margin_top = 255.772
 margin_right = 599.09
-margin_bottom = 256.751
+margin_bottom = 337.772
 text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
