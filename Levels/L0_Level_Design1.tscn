@@ -26,3 +26,14 @@ rotation = 1.5708
 position = Vector2( 985.585, 202.177 )
 scale = Vector2( 1, 7.4 )
 next_level = 2
+
+[node name="Label" type="Label" parent="."]
+margin_left = 304.294
+margin_top = 152.364
+margin_right = 845.294
+margin_bottom = 307.364
+text = "Use the arrows or WASD to walk
+Shift or Control to run"
+__meta__ = {
+"_edit_use_anchors_": false
+}

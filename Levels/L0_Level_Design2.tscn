@@ -46,3 +46,54 @@ rotation = -1.5708
 [node name="StaticBody2D5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 802.835, 273.7 )
 rotation = -1.5708
+
+[node name="Label" type="Label" parent="."]
+margin_left = 23.4138
+margin_top = 253.564
+margin_right = 274.414
+margin_bottom = 408.564
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 8
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+text = "Space or arrow
+up to jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 403.033
+margin_top = 165.55
+margin_right = 664.033
+margin_bottom = 320.55
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.7, 0.7 )
+size_flags_horizontal = 8
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+text = "You can double
+jump too!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 646.304
+margin_top = 226.385
+margin_right = 907.304
+margin_bottom = 381.385
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 8
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+text = "Jump multiple
+times to climb"
+__meta__ = {
+"_edit_use_anchors_": false
+}
