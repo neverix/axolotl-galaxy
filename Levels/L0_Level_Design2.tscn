@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Location0/Background.png" type="Texture" id=1]
 [ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/Long_Platform_L0.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Elements/Short_Platform_L0.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elements/Spike.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -72,3 +73,90 @@ jump too!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Area2D2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 211.175, 379.78 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 229.607, 379.78 )
+
+[node name="Area2D4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 248.04, 379.78 )
+
+[node name="Area2D5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 266.473, 379.78 )
+
+[node name="Area2D6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 284.592, 379.78 )
+
+[node name="Area2D7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 303.024, 379.78 )
+
+[node name="Area2D8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 321.457, 379.78 )
+
+[node name="Area2D9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 339.89, 379.78 )
+
+[node name="Area2D10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 358.009, 379.78 )
+
+[node name="Area2D11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 376.441, 379.78 )
+
+[node name="Area2D12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 394.874, 379.78 )
+
+[node name="Area2D13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 413.307, 379.78 )
+
+[node name="Area2D14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 431.227, 379.78 )
+
+[node name="Area2D15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 449.659, 379.78 )
+
+[node name="Area2D16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 468.092, 379.78 )
+
+[node name="Area2D17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 486.525, 379.78 )
+
+[node name="Area2D18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 504.644, 379.78 )
+
+[node name="Area2D19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 523.076, 379.78 )
+
+[node name="Area2D20" parent="." instance=ExtResource( 6 )]
+position = Vector2( 541.509, 379.78 )
+
+[node name="Area2D21" parent="." instance=ExtResource( 6 )]
+position = Vector2( 559.942, 379.78 )
+
+[node name="Area2D22" parent="." instance=ExtResource( 6 )]
+position = Vector2( 578.061, 379.78 )
+
+[node name="Area2D23" parent="." instance=ExtResource( 6 )]
+position = Vector2( 596.493, 379.78 )
+
+[node name="Area2D24" parent="." instance=ExtResource( 6 )]
+position = Vector2( 614.926, 379.78 )
+
+[node name="Area2D25" parent="." instance=ExtResource( 6 )]
+position = Vector2( 633.359, 379.78 )
+
+[node name="Area2D26" parent="." instance=ExtResource( 6 )]
+position = Vector2( 651.082, 379.78 )
+
+[node name="Area2D27" parent="." instance=ExtResource( 6 )]
+position = Vector2( 669.514, 379.78 )
+
+[node name="Area2D28" parent="." instance=ExtResource( 6 )]
+position = Vector2( 687.947, 379.78 )
+
+[node name="Area2D29" parent="." instance=ExtResource( 6 )]
+position = Vector2( 706.38, 379.78 )
+
+[node name="Area2D30" parent="." instance=ExtResource( 6 )]
+position = Vector2( 724.499, 379.78 )

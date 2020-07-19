@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Location0/Background.png" type="Texture" id=1]
 [ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/Long_Platform_L0.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Elements/Short_Platform_L0.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elements/Spike.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,6 +31,9 @@ position = Vector2( -26.6967, 202.177 )
 scale = Vector2( 1, 7.4 )
 next_level = 3
 
+[node name="Area2D37" parent="." instance=ExtResource( 6 )]
+position = Vector2( 775.149, 512.206 )
+
 [node name="StaticBody2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 163.444, 468.311 )
 
@@ -54,5 +58,143 @@ rotation = -1.5708
 scale = Vector2( 0.786, 0.5 )
 
 [node name="StaticBody2D8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 869.806, 315.544 )
+position = Vector2( 869.806, 295.038 )
 scale = Vector2( 0.861, 0.5 )
+
+[node name="Area2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 115.072, 512.206 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 133.426, 512.206 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 151.78, 512.206 )
+
+[node name="Area2D4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 170.134, 512.206 )
+
+[node name="Area2D5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 188.489, 512.206 )
+
+[node name="Area2D6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 206.843, 512.206 )
+
+[node name="Area2D7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 225.197, 512.206 )
+
+[node name="Area2D8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 243.552, 512.206 )
+
+[node name="Area2D9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 261.808, 512.206 )
+
+[node name="Area2D10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 280.162, 512.206 )
+
+[node name="Area2D11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 298.517, 512.206 )
+
+[node name="Area2D12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 316.871, 512.206 )
+
+[node name="Area2D13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 335.225, 512.206 )
+
+[node name="Area2D14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 353.579, 512.206 )
+
+[node name="Area2D15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 371.934, 512.206 )
+
+[node name="Area2D16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 390.288, 512.206 )
+
+[node name="Area2D17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 408.21, 512.206 )
+
+[node name="Area2D18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 426.565, 512.206 )
+
+[node name="Area2D19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 444.919, 512.206 )
+
+[node name="Area2D20" parent="." instance=ExtResource( 6 )]
+position = Vector2( 463.273, 512.206 )
+
+[node name="Area2D21" parent="." instance=ExtResource( 6 )]
+position = Vector2( 481.627, 512.206 )
+
+[node name="Area2D22" parent="." instance=ExtResource( 6 )]
+position = Vector2( 499.982, 512.206 )
+
+[node name="Area2D23" parent="." instance=ExtResource( 6 )]
+position = Vector2( 518.336, 512.206 )
+
+[node name="Area2D24" parent="." instance=ExtResource( 6 )]
+position = Vector2( 536.69, 512.206 )
+
+[node name="Area2D25" parent="." instance=ExtResource( 6 )]
+position = Vector2( 554.902, 512.206 )
+
+[node name="Area2D26" parent="." instance=ExtResource( 6 )]
+position = Vector2( 573.257, 512.206 )
+
+[node name="Area2D27" parent="." instance=ExtResource( 6 )]
+position = Vector2( 591.611, 512.206 )
+
+[node name="Area2D28" parent="." instance=ExtResource( 6 )]
+position = Vector2( 609.965, 512.206 )
+
+[node name="Area2D29" parent="." instance=ExtResource( 6 )]
+position = Vector2( 628.406, 512.206 )
+
+[node name="Area2D30" parent="." instance=ExtResource( 6 )]
+position = Vector2( 646.76, 512.206 )
+
+[node name="Area2D31" parent="." instance=ExtResource( 6 )]
+position = Vector2( 665.114, 512.206 )
+
+[node name="Area2D32" parent="." instance=ExtResource( 6 )]
+position = Vector2( 683.469, 512.206 )
+
+[node name="Area2D33" parent="." instance=ExtResource( 6 )]
+position = Vector2( 701.823, 512.206 )
+
+[node name="Area2D34" parent="." instance=ExtResource( 6 )]
+position = Vector2( 720.177, 512.206 )
+
+[node name="Area2D35" parent="." instance=ExtResource( 6 )]
+position = Vector2( 738.531, 512.206 )
+
+[node name="Area2D36" parent="." instance=ExtResource( 6 )]
+position = Vector2( 756.886, 512.206 )
+
+[node name="Area2D38" parent="." instance=ExtResource( 6 )]
+position = Vector2( 788.922, 398.745 )
+
+[node name="Area2D39" parent="." instance=ExtResource( 6 )]
+position = Vector2( 800.708, 268.237 )
+
+[node name="Area2D40" parent="." instance=ExtResource( 6 )]
+position = Vector2( 819.228, 268.237 )
+
+[node name="Area2D41" parent="." instance=ExtResource( 6 )]
+position = Vector2( 837.492, 268.237 )
+
+[node name="Area2D42" parent="." instance=ExtResource( 6 )]
+position = Vector2( 855.755, 268.237 )
+
+[node name="Area2D43" parent="." instance=ExtResource( 6 )]
+position = Vector2( 873.796, 268.237 )
+
+[node name="Area2D44" parent="." instance=ExtResource( 6 )]
+position = Vector2( 892.06, 268.237 )
+
+[node name="Area2D45" parent="." instance=ExtResource( 6 )]
+position = Vector2( 910.323, 268.237 )
+
+[node name="Area2D46" parent="." instance=ExtResource( 6 )]
+position = Vector2( 927.982, 268.237 )
+
+[node name="Area2D47" parent="." instance=ExtResource( 6 )]
+position = Vector2( 946.692, 268.237 )

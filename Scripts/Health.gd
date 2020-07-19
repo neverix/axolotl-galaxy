@@ -2,15 +2,12 @@ extends Control
 
 export var max_health = 5
 var now_health = max_health
-var player = false
 var bar
 
 func _ready():
 	bar = get_tree().get_nodes_in_group("Health")[0]
 	bar.max_value = max_health
 	bar.value = now_health
-	if GameManager.cur_player == get_parent():
-		player = true
 
 func health(new_value):
 	now_health = new_value
@@ -22,5 +19,5 @@ func damage(damage_value):
 		death()
 
 func death():
-	if player:
+	if get_parent() == GameManager.cur_player:
 		GameManager.death()
