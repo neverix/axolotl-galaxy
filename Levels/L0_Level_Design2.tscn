@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Location0/Background.png" type="Texture" id=1]
+[ext_resource path="res://Elements/Invisiable_Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Win.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elements/Long_Platform_L0.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elements/Short_Platform_L0.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="TextureRect" parent="."]
+margin_right = 969.0
+margin_bottom = 542.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FLoor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 304.294, 410.147 )
+
+[node name="L0S2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 985.585, 202.177 )
+scale = Vector2( 1, 7.4 )
+next_level = 8
+
+[node name="L0S1" parent="." instance=ExtResource( 3 )]
+position = Vector2( -26.6967, 202.177 )
+scale = Vector2( 1, 7.4 )
+next_level = 1
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 208.605, 350.494 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 350.258, 310.404 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 613.964, 337.131 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 802.835, 356.761 )
+rotation = -1.5708
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 802.835, 273.7 )
+rotation = -1.5708
