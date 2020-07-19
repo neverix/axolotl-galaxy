@@ -125,13 +125,12 @@ func _physics_process(delta):
 	# если он на земле, обнуляем скорость. горизонтальную составляющую мы зададим ниже
 	if on_ground:
 		velocity = Vector2 (0, 0)
+		air_jumps_left = air_jumps
 	# если нажата кнопка прыжок
 	if jumping:
 		# только что прыгнул, добавляем силу прыжка
 		if just_jumped and (on_ground or air_jumps_left > 0):
 			air_jumps_left -= 1
-			if on_ground:
-				air_jumps_left = air_jumps
 			rising = true
 			jump_time = 0
 			jump()

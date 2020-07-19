@@ -25,9 +25,12 @@ var levels = [
 	"L2S1_pos1", #13
 	"L2s1_pos2", #14
 	
-	"ComingSoon" #15
+	"L2S2", # 15
+	
+	"ComingSoon" #16
 ]
 var level_index = 0
+var skip_cutscene = false
 var cur_player = null
 var next_player = null
 
@@ -61,6 +64,9 @@ func win(next_level):
 	game()
 
 func start():
+	if skip_cutscene:
+		game()
+		return
 	load_scene("res://Scenes/Slideshow.tscn")
 
 func menu():
