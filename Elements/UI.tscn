@@ -27,6 +27,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause/UI"]
+visible = false
+margin_left = 334.0
+margin_top = 147.0
+margin_right = 600.0
+margin_bottom = 444.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Resume" type="Button" parent="CanvasLayer/Pause/UI"]
 margin_left = 335.873
 margin_top = 362.377
